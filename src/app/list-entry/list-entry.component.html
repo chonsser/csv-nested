@@ -1,0 +1,9 @@
+<li [class.collapsed]="collapsed" (click)="collapse($event)">
+  <span class="symbol" [innerHTML]="element.children.length > 0 ? (collapsed ? '&uarr;' : '&darr;') : '*'"></span>
+  <span>
+    {{ prefix + element.title }}
+  </span>
+  <ul *ngIf="element.children.length > 0">
+    <app-list-entry *ngFor="let child of element.children" [element]="child" [prefix]="prefix + element.title +  '.'"></app-list-entry>
+  </ul>
+</li>

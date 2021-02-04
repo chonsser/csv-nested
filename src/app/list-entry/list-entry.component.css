@@ -1,0 +1,14 @@
+li {
+  overflow-y: hidden;
+  transition: max-height 100ms linear;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+li.collapsed > ul {
+  max-height: 0;
+}
+
+li span.symbol {
+  font-size: 1.25em;
+}
